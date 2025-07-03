@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fathers & Kids Camping 2025</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="startApp()">
+    <header>
+      <h3>🔥⛺️BELA BELA 2025</h3>
+      <br />
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <nav class="tab-bar" id="tabMenu">
+      <button onclick="showTab('home')" id="tab-home" class="active">
+        Home
+      </button>
+      <button onclick="showTab('calculator')" id="tab-calculator">
+        Calculate Cost
+      </button>
+      <button onclick="showTab('form')" id="tab-form">
+        More Details Needed
+      </button>
+    </nav>
+
+    <main>
+      <section id="home" class="tab-panel show">
+        <div class="description">
+          <p>
+            Welcome to the annual
+            <strong>Fathers and Kids Camping 2025</strong> at
+            <strong>Bela Bela Warmbaths</strong>.
+          </p>
+          <p>
+            Expect fun, bonding, braais, swimming, warm pools, and lifelong
+            memories with the little ones!
+          </p>
+        </div>
+        <div class="carousel">
+          <img id="carouselImage" src="images/1.jpeg" alt="Camping photo" />
+        </div>
+      </section>
+
+      <section id="calculator" class="tab-panel">
+        <div class="form-group">
+          <label>Number of Kids incl Adult:</label>
+          <input type="number" id="totalPersons" min="1" />
+        </div>
+        <div class="form-group">
+          <label>Number of Kids under 5 yrs old:</label>
+          <input type="number" id="under5" min="0" />
+        </div>
+        <button class="calculate-btn" onclick="calculateCosts()">
+          Calculate
+        </button>
+        <div id="results"></div>
+        <div class="calc-notes">
+          <p>
+            * Food at R70 per meal per person. Total of 5 meals (Fri dinner,
+            Sat: breakfast, lunch, dinner & Sun breakfast).
+          </p>
+          <p>* Entertainment fee of R200 per person (once-off).</p>
+          <p>
+            * Accommodation based on High Season rates – see:
+            <a
+              href="https://www.foreverwarmbaths.co.za/accommodation.php"
+              target="_blank"
+              >Warmbaths Rates</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section id="form" class="tab-panel show">
+        <iframe
+          src="https://forms.office.com/r/cqF4uUXn1j"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

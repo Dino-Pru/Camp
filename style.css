@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  color: #333;
+  overflow-x: hidden;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  position: relative;
+}
+
+.hamburger {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  display: none;
+}
+
+.tab-bar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f4e1d2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tab-bar button {
+  flex: 1;
+  margin: 0 0.3rem;
+  padding: 0.8rem;
+  border: none;
+  background-color: #fff;
+  color: #bc5a4;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab-bar button.active {
+  background-color: #bc5a4;
+  color: #fff !important;
+  transform: scale(1.05);
+}
+
+main {
+  padding: 1rem;
+}
+
+.tab-panel {
+  display: none;
+  animation: slideIn 0.4s forwards;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.tab-panel.show {
+  display: block;
+}
+
+.description {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+iframe {
+  width: 100%;
+  height: 80vh;
+  border: none;
+}
+
+.form-group {
+  margin: 1rem 0;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.calculate-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: #f18973;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.calculate-btn:hover {
+  background-color: #e26e55;
+}
+
+#results {
+  margin-top: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-bar {
+    flex-direction: column;
+    display: none;
+  }
+
+  .tab-bar.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+.carousel {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.carousel img {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease-in-out;
+}
+.calc-notes {
+  margin-top: 1rem;
+  background: #f4e1d2;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-left: 4px solid #bc5a4;
+  border-radius: 6px;
+}
+
+.calc-notes a {
+  color: #bc5a4;
+  text-decoration: underline;
+}
+
+/* Better tab visibility */
+.tab-bar button.active {
+  background-color: #bc5a4;
+  color: #fff !important;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+.tab-bar button.active {
+  background-color: #bc5a4;
+  color: #fff !important;
+  font-weight: bold;
+  transform: scale(1.05);
+  border: 2px solid black;
+}
