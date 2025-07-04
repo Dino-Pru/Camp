@@ -277,4 +277,193 @@ input:focus {
   outline: 2px solid #9b2226;
   outline-offset: 2px;
 }
+/* Cost Table */
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
+.cost-table th,
+.cost-table td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.cost-table th {
+  background: #9b2226;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cost-table tbody tr:hover {
+  background: #f8edeb;
+}
+
+.cost-table tfoot {
+  background: #f4f4f4;
+  font-weight: 600;
+}
+
+.cost-table tfoot td {
+  border-top: 2px solid #9b2226;
+}
+
+@media (max-width: 768px) {
+  .cost-table th,
+  .cost-table td {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+/* Itinerary Table */
+.itinerary-container {
+  margin-top: 1rem;
+}
+
+.itinerary-day {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.itinerary-day[open] summary {
+  border-bottom: 1px solid #ddd;
+}
+
+.itinerary-day summary {
+  padding: 1rem;
+  font-weight: 600;
+  color: #9b2226;
+  cursor: pointer;
+  background: #f4e1d2;
+  transition: background 0.3s ease;
+}
+
+.itinerary-day summary:hover {
+  background: #ffe5e5;
+}
+
+.itinerary-list {
+  padding: 1rem;
+}
+
+.itinerary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.itinerary-item:last-child {
+  border-bottom: none;
+}
+
+.itinerary-item .task {
+  flex: 2;
+  font-weight: 500;
+}
+
+.itinerary-item .time {
+  flex: 1;
+  text-align: right;
+  color: #555;
+}
+
+.itinerary-item .parent {
+  flex: 1;
+  text-align: right;
+  color: #9b2226;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .itinerary-day summary {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .itinerary-list {
+    padding: 0.8rem;
+  }
+
+  .itinerary-item {
+    flex-direction: column;
+    text-align: left;
+    padding: 0.4rem 0;
+  }
+
+  .itinerary-item .time,
+  .itinerary-item .parent {
+    text-align: left;
+    margin-top: 0.2rem;
+  }
+}
+/* Food & Snacks Table */
+.food-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.food-table th,
+.food-table td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.food-table th {
+  background: #9b2226;
+  color: #fff;
+  font-weight: 600;
+}
+
+.food-table tbody tr {
+  background: #f4e1d2;
+}
+
+.food-table .category-header {
+  background: #ffe5e5;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.food-table .subtotal,
+.food-table .total {
+  background: #fff;
+  font-weight: 700;
+  color: #9b2226;
+}
+
+.food-table .subtotal td,
+.food-table .total td {
+  border-top: 2px solid #9b2226;
+}
+
+.food-table tbody tr:hover {
+  background: #ffd1d1;
+}
+
+@media (max-width: 768px) {
+  .food-table th,
+  .food-table td {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  .food-table .category-header {
+    font-size: 1rem;
+  }
+}
