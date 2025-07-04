@@ -16,7 +16,7 @@
   </head>
   <body>
     <header>
-      <h3>🔥⛺ Camping 2025</h3>
+      <h3>🔥Camping 2025⛺</h3>
       <button
         class="hamburger"
         aria-label="Toggle navigation menu"
@@ -32,6 +32,7 @@
       <button id="tab-form">More Details Needed</button>
       <button id="tab-itinerary">Itinerary</button>
       <button id="tab-necessities">Necessities</button>
+      <button id="tab-food-snacks">Food & Snacks</button>
     </nav>
 
     <main>
@@ -85,8 +86,8 @@
         <div id="results" aria-live="polite"></div>
         <div class="calc-notes">
           <p>
-            * Food at R70 per meal per person (kids under 5 free). Total of 5
-            meals (Fri dinner, Sat: breakfast, lunch, dinner & Sun breakfast).
+            * Food at R70 per meal per person (including kids under 5). Total of
+            5 meals (Fri dinner, Sat: breakfast, lunch, dinner & Sun breakfast).
           </p>
           <p>* Entertainment fee of R200 per person (once-off).</p>
           <p>
@@ -110,7 +111,89 @@
       </section>
 
       <section id="itinerary" class="tab-panel" aria-labelledby="itinerary-tab">
-        <p>Itinerary content coming soon...</p>
+        <h3>Itinerary</h3>
+        <div class="itinerary-container">
+          <details class="itinerary-day">
+            <summary>Friday</summary>
+            <div class="itinerary-list">
+              <div class="itinerary-item">
+                <span class="task">Buy camping groceries</span>
+                <span class="time">09:00 - 14:00</span>
+                <span class="parent"></span>
+              </div>
+              <div class="itinerary-item">
+                <span class="task">Arrivals (Check-in)</span>
+                <span class="time">14:00 - 15:00</span>
+                <span class="parent">ALL</span>
+              </div>
+              <div class="itinerary-item">
+                <span class="task">Setup the tents</span>
+                <span class="time">15:00 - 17:00</span>
+                <span class="parent">ALL</span>
+              </div>
+              <div class="itinerary-item">
+                <span class="task">Dinner - Braai (Meet & Greet)</span>
+                <span class="time">19:00 - 20:00</span>
+                <span class="parent">ALL</span>
+              </div>
+            </div>
+          </details>
+          <details class="itinerary-day">
+            <summary>Saturday</summary>
+            <div class="itinerary-list">
+              <div class="itinerary-item">
+                <span class="task">English Breakfast</span>
+                <span class="time">07:00 - 08:00</span>
+                <span class="parent"></span>
+              </div>
+              <div class="itinerary-item">
+                <span class="task">Snacks (Fruits, Juice & Chips)</span>
+                <span class="time">10:00 - 12:30</span>
+                <span class="parent"></span>
+              </div>
+              <div class="itinerary-item">
+                <span class="task">Lunch (Takeouts)</span>
+                <span class="time">12:30 - 13:30</span>
+                <span class="parent"></span>
+              </div>
+              <div class="itinerary-item">
+                <span class="task">Activity</span>
+                <span class="time">13:30 - 16:00</span>
+                <span class="parent"></span>
+              </div>
+              <div class="itinerary-item">
+                <span class="task">Afternoon Snacks</span>
+                <span class="time">16:00 - 17:00</span>
+                <span class="parent"></span>
+              </div>
+              <div class="itinerary-item">
+                <span class="task">Dinner - Potjiekos</span>
+                <span class="time">18:00 - 20:00</span>
+                <span class="parent"></span>
+              </div>
+            </div>
+          </details>
+          <details class="itinerary-day">
+            <summary>Sunday</summary>
+            <div class="itinerary-list">
+              <div class="itinerary-item">
+                <span class="task">English Breakfast</span>
+                <span class="time">07:00 - 08:00</span>
+                <span class="parent"></span>
+              </div>
+              <div class="itinerary-item">
+                <span class="task">Roll up the tents</span>
+                <span class="time">08:00 - 09:00</span>
+                <span class="parent">ALL</span>
+              </div>
+              <div class="itinerary-item">
+                <span class="task">Departure</span>
+                <span class="time">09:00 - 10:00</span>
+                <span class="parent">ALL</span>
+              </div>
+            </div>
+          </details>
+        </div>
       </section>
 
       <section
@@ -120,9 +203,205 @@
       >
         <p>Necessities list will be available here...</p>
       </section>
+
+      <section
+        id="food-snacks"
+        class="tab-panel"
+        aria-labelledby="food-snacks-tab"
+      >
+        <h3>Food & Snacks</h3>
+        <table class="food-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Item</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="category-header">
+              <td colspan="3">Snacks</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Juice boxes</td>
+              <td>R1500</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Ice Creams</td>
+              <td>R1800</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Fruits</td>
+              <td>R700</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Chips</td>
+              <td>R800</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Cold Drinks</td>
+              <td>R500</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Biscuits</td>
+              <td>R300</td>
+            </tr>
+            <tr class="subtotal">
+              <td colspan="2">Subtotal</td>
+              <td>R5800</td>
+            </tr>
+
+            <tr class="category-header">
+              <td colspan="3">Protein</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Chicken wings</td>
+              <td>R600</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Wors</td>
+              <td>R600</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Potjie meat</td>
+              <td>R500</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Viennas/Cheese</td>
+              <td>R400</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Red Meat</td>
+              <td>R500</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Pork</td>
+              <td>R400</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Burgers</td>
+              <td>R400</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Eggs</td>
+              <td>R250</td>
+            </tr>
+            <tr class="subtotal">
+              <td colspan="2">Subtotal</td>
+              <td>R3650</td>
+            </tr>
+
+            <tr class="category-header">
+              <td colspan="3">Other</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Veggies</td>
+              <td>R400</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Wood</td>
+              <td>R400</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Cooking Oil</td>
+              <td>R200</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Charcoal</td>
+              <td>R150</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Maize Meal</td>
+              <td>R100</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Rolls</td>
+              <td>R100</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Bread</td>
+              <td>R100</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Coffee & Tea</td>
+              <td>R100</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Paper plates</td>
+              <td>R100</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Plastic Mugs</td>
+              <td>R100</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Cereals</td>
+              <td>R100</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Milk</td>
+              <td>R80</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Spices</td>
+              <td>R50</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Dishwashing cloths</td>
+              <td>R50</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Dishwashing soap</td>
+              <td>R50</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Plastic Spoons & Cups</td>
+              <td>R100</td>
+            </tr>
+            <tr class="subtotal">
+              <td colspan="2">Subtotal</td>
+              <td>R2380</td>
+            </tr>
+
+            <tr class="total">
+              <td colspan="2">Grand Total</td>
+              <td>R11830</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
 
     <script src="script.js"></script>
   </body>
 </html>
-
