@@ -1,4 +1,3 @@
-// Preload images to avoid flickering
 const bgImages = Array.from({ length: 7 }, (_, i) => `images/${i + 1}.jpeg`);
 let currentBgIndex = 0;
 
@@ -68,8 +67,8 @@ function calculateCosts() {
     return;
   }
 
-  const foodPerPerson = 70 * 5; // R70 per meal, 5 meals
-  const foodCost = (total - under5) * foodPerPerson; // Kids under 5 don't pay for food
+  const foodPerPerson = 70 * 5;
+  const foodCost = total * foodPerPerson;
   const entertainmentCost = total * 200;
   const nights = 2;
 
@@ -90,17 +89,38 @@ function calculateCosts() {
 
   const html = `
     <h3>Estimated Costs</h3>
-    <p>Food (R70 x 5 meals for ${
-      total - under5
-    } people): <strong>R${foodCost.toFixed(2)}</strong></p>
-    <p>Entertainment Fee (R200 per person for ${total} people): <strong>R${entertainmentCost.toFixed(
-    2
-  )}</strong></p>
-    <p>Accommodation (High Season x ${nights} nights for ${total} people): <strong>R${accommodation.toFixed(
-    2
-  )}</strong></p>
-    <hr />
-    <p><strong>Total Estimate: R${totalEstimate.toFixed(2)}</strong></p>
+    <table class="cost-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Food</td>
+          <td>R70 x 5 meals for ${total} people (incl. kids under 5)</td>
+          <td>R${foodCost.toFixed(2)}</td>
+        </tr>
+        <tr>
+          <td>Entertainment</td>
+          <td>R200 per person for ${total} people</td>
+          <td>R${entertainmentCost.toFixed(2)}</td>
+        </tr>
+        <tr>
+          <td>Accommodation</td>
+          <td>High Season x ${nights} nights for ${total} people</td>
+          <td>R${accommodation.toFixed(2)}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2"><strong>Total Estimate</strong></td>
+          <td><strong>R${totalEstimate.toFixed(2)}</strong></td>
+        </tr>
+      </tfoot>
+    </table>
   `;
 
   document.getElementById("results").innerHTML = html;
@@ -128,7 +148,6 @@ function loadSavedEstimate() {
   }
 }
 
-// Event delegation for tab clicks
 document.getElementById("tabMenu").addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     const tabId = e.target.id.replace("tab-", "");
@@ -136,6 +155,4 @@ document.getElementById("tabMenu").addEventListener("click", (e) => {
   }
 });
 
-// Initialize app
 document.addEventListener("DOMContentLoaded", startApp);
-
