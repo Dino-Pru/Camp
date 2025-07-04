@@ -3,30 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fathers & Kids Camping 2025</title>
+    <meta
+      name="description"
+      content="Join the Fathers and Kids Camping 2025 at Bela Bela Warmbaths for fun, bonding, and lifelong memories!"
+    />
+    <title>Fathers & Kids Camping 2025 - Bela Bela</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body onload="startApp()">
+  <body>
     <header>
-      <h3>🔥⛺️BELA BELA 2025</h3>
-      <br />
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <h3>🔥⛺ Fathers & Kids Camping 2025</h3>
+      <button
+        class="hamburger"
+        aria-label="Toggle navigation menu"
+        onclick="toggleMenu()"
+      >
+        ☰
+      </button>
     </header>
 
-    <nav class="tab-bar" id="tabMenu">
-      <button onclick="showTab('home')" id="tab-home" class="active">
-        Home
-      </button>
-      <button onclick="showTab('calculator')" id="tab-calculator">
-        Calculate Cost
-      </button>
-      <button onclick="showTab('form')" id="tab-form">
-        More Details Needed
-      </button>
+    <nav class="tab-bar" id="tabMenu" aria-label="Main navigation">
+      <button id="tab-home" class="active" aria-current="page">Home</button>
+      <button id="tab-calculator">Calculate Cost</button>
+      <button id="tab-form">More Details Needed</button>
+      <button id="tab-itinerary">Itinerary</button>
+      <button id="tab-necessities">Necessities</button>
     </nav>
 
     <main>
-      <section id="home" class="tab-panel show">
+      <section id="home" class="tab-panel show" aria-labelledby="home-tab">
         <div class="description">
           <p>
             Welcome to the annual
@@ -39,27 +48,45 @@
           </p>
         </div>
         <div class="carousel">
-          <img id="carouselImage" src="images/1.jpeg" alt="Camping photo" />
+          <img
+            id="carouselImage"
+            src="images/1.jpeg"
+            alt="Camping activity at Bela Bela"
+          />
         </div>
       </section>
 
-      <section id="calculator" class="tab-panel">
+      <section
+        id="calculator"
+        class="tab-panel"
+        aria-labelledby="calculator-tab"
+      >
         <div class="form-group">
-          <label>Number of Kids incl Adult:</label>
-          <input type="number" id="totalPersons" min="1" />
+          <label for="totalPersons">Number of Kids incl Adult:</label>
+          <input
+            type="number"
+            id="totalPersons"
+            min="1"
+            aria-describedby="totalPersonsHelp"
+          />
         </div>
         <div class="form-group">
-          <label>Number of Kids under 5 yrs old:</label>
-          <input type="number" id="under5" min="0" />
+          <label for="under5">Number of Kids under 5 yrs old:</label>
+          <input
+            type="number"
+            id="under5"
+            min="0"
+            aria-describedby="under5Help"
+          />
         </div>
         <button class="calculate-btn" onclick="calculateCosts()">
           Calculate
         </button>
-        <div id="results"></div>
+        <div id="results" aria-live="polite"></div>
         <div class="calc-notes">
           <p>
-            * Food at R70 per meal per person. Total of 5 meals (Fri dinner,
-            Sat: breakfast, lunch, dinner & Sun breakfast).
+            * Food at R70 per meal per person (kids under 5 free). Total of 5
+            meals (Fri dinner, Sat: breakfast, lunch, dinner & Sun breakfast).
           </p>
           <p>* Entertainment fee of R200 per person (once-off).</p>
           <p>
@@ -67,20 +94,35 @@
             <a
               href="https://www.foreverwarmbaths.co.za/accommodation.php"
               target="_blank"
+              rel="noopener"
               >Warmbaths Rates</a
             >
           </p>
         </div>
       </section>
 
-      <section id="form" class="tab-panel show">
+      <section id="form" class="tab-panel" aria-labelledby="form-tab">
         <iframe
           src="https://forms.office.com/r/cqF4uUXn1j"
           allowfullscreen
+          title="More Details Form"
         ></iframe>
+      </section>
+
+      <section id="itinerary" class="tab-panel" aria-labelledby="itinerary-tab">
+        <p>Itinerary content coming soon...</p>
+      </section>
+
+      <section
+        id="necessities"
+        class="tab-panel"
+        aria-labelledby="necessities-tab"
+      >
+        <p>Necessities list will be available here...</p>
       </section>
     </main>
 
     <script src="script.js"></script>
   </body>
 </html>
+
